@@ -1,0 +1,30 @@
+*{
+    font-family: "Cabin", Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+.outer-body{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-container{
+    position: fixed;
+    height: calc(100vh - 1em);
+    width: var(--navbar-width);
+    border-radius: 5px;
+    background-color: lightblue;
+}
+
+.navbar-background{
+    background-color: lightgrey;
+    opacity: 0.5;
+}
+
+.body-container{
+    padding: 1em;
+}
