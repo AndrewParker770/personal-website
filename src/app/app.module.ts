@@ -8,6 +8,8 @@ import { ContactComponent } from './contact/contact.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SkillsComponent } from './skills/skills.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { SkillsComponent } from './skills/skills.component';
     ContactComponent,
     SidenavComponent,
     ProfileComponent,
-    SkillsComponent
+    SkillsComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,184 @@
+svg * { 
+    transform-box: fill-box;
+  }
+
+.navbar-inner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.navbar-header{
+    align-self: center;
+}
+
+.header-image{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.header-text{
+    margin: 0;
+    padding: 0;
+}
+
+.header-text > h3, p{
+    text-align: center;
+}
+
 ul{
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    padding-left: 2em;
+    gap: 3em;
+}
+
+ul > a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 a{
-    color: black;
     text-decoration: none;
+    color: white;
+    transition: color 0.4s ease;
 }
 
 .isActive{
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 0.15em;
+
+    color: rgb(80, 170, 200);
 }
+
+.isActive > a{
+    color: inherit;
+}
+
+.isActive > svg{
+    color: inherit;
+}
+
+
+@media(max-width: 600px){
+    .navbar-header{
+        display: none;
+    }
+    
+    a > a{
+        display: none;
+    }
+
+    ul{
+        height: 75%;
+        justify-content: space-around;
+        align-self: center;
+        padding-left: 0;
+    }
+}
+
+svg{
+    transition: color 0.4s ease;
+}
+
+
+
+
+#open{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#closed{
+    transition: opacity 1s ease-in-out;
+}
+
+.isActive > svg > #open
+{
+    opacity: 1;
+}
+
+.isActive > svg > #closed
+{
+    opacity: 0;
+}
+
+svg:hover > #open{
+    opacity: 1;
+}
+
+svg:hover > #closed{
+    opacity: 0;
+}
+
+
+/* shared behind icon elements             */
+
+#behind{
+    opacity: 0;
+    transition: 1s opacity ease;
+}
+
+svg:hover > #behind{
+    opacity: 1;
+}
+
+.isActive > svg > #behind
+{
+    opacity: 1;
+}
+
+
+/* Profile icon lines         */
+
+svg:hover > g > #line{
+    opacity: 1;
+}
+
+
+.isActive > svg > g > #line
+{
+    opacity: 1;
+}
+
+#line
+{
+    opacity: 0;
+    transition: opacity 2s ease;
+    transition-delay: calc(var(--order) * 200ms);
+}
+
+
+/*   Contact Icon -- shares top and behind*/ 
+
+#dot
+{
+    opacity: 0;
+    transition: opacity 2s ease;
+    transition-delay: calc(var(--order) * 200ms);
+}
+
+svg:hover > #dot{
+    opacity: 1;
+}
+
+.isActive > svg > #dot
+{
+    opacity: 1;
+}
+
+/*  Skills  gear      */
+
+
+
+/*                      */
+
