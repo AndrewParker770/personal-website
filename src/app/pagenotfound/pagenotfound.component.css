@@ -1,0 +1,12 @@
+.errorpage-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: calc(100vw - var(--navbar-width));
+    padding: 1em;
+
+    box-sizing: border-box;
+    margin-left: var(--navbar-width);
+}

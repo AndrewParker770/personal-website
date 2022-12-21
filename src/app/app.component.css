@@ -7,14 +7,10 @@
     position: fixed;
     height: 100vh;
     width: var(--navbar-width);
-    background-color: black;
+    background-color: var(--navbar-background);
     opacity: 0.8;
 }
 
 .navbar-background{
     opacity: 0.5;
-}
-
-.body-container{
-    padding: 1em;
 }

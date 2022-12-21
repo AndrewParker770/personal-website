@@ -17,10 +17,12 @@ export class AppComponent {
       "(max-width: 600px)"
     ]).subscribe((result: BreakpointState) => {
       if (result.matches) {
-          // hide stuff       
+          // hide stuff   
+          document.documentElement.style.setProperty('--navbar-width', '4em');    
           this.navbarWidth = '4em' 
       } else {
           // show stuff
+          document.documentElement.style.setProperty('--navbar-width', '10em');
           this.navbarWidth = '10em'
       }
     });

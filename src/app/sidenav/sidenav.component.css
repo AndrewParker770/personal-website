@@ -9,26 +9,6 @@ svg * {
     height: 100%;
 }
 
-.navbar-header{
-    align-self: center;
-}
-
-.header-image{
-    width: 8em;
-    height: 8em;
-    border-radius: 50%;
-    background-color: black;
-}
-
-.header-text{
-    margin: 0;
-    padding: 0;
-}
-
-.header-text > h3, p{
-    text-align: center;
-}
-
 ul{
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -57,7 +37,7 @@ a{
     text-decoration-thickness: 2.5px;
     text-underline-offset: 0.15em;
 
-    color: rgb(80, 170, 200);
+    color: var(--active-colour);
 }
 
 .isActive > a{
