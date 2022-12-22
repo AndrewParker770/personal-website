@@ -104,6 +104,7 @@
   background-size: cover;
   width: var(--coin-width);
   height: var(--coin-height);
+  border-radius: 50%;
 
   transform: translateZ(1px);
   position: absolute;
@@ -160,8 +161,8 @@
 
 @media(max-width: 1200px){
   .homepage-container{
-    --coin-width: 300px;
-    --coin-height: 300px;
+    --coin-width: 250px;
+    --coin-height: 250px;
 
     --welcome-font: 64px;
 
