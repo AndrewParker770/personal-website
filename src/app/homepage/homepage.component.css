@@ -1,11 +1,14 @@
 .homepage-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
     height: 100vh;
     width: calc(100vw - var(--navbar-width));
+
+    display: grid;
+    grid-template-areas: 
+    'welcome thumbnail'
+    'body thumbnail';
+
     padding: 1em;
+    padding-left: 3em;
 
     box-sizing: border-box;
     margin-left: var(--navbar-width);
@@ -13,11 +16,19 @@
 
 #welcome{
     font-family: 'Pacifico', cursive;
-    text-align: center;
     padding: 0;
     margin: 0;
 
-    font-size: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:end;
+
+    text-align: start;
+
+    font-size: var(--welcome-font);
+
+    grid-area: welcome;
 }
 
 .header-image{
@@ -30,28 +41,42 @@
     padding-bottom: 1em;
 }
 
+#thumbnail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: thumbnail;
+}
+
+
 .header-text{
     margin: 0;
     padding: 0;
 }
 
-.header-text > h3, p{
-    text-align: center;
-}
-
-.homepage-container > #homepage-body{
-    font-size: 24px;
-    max-width: 1200px;
-
-    align-self: center;
-
-    text-align: center;
-    padding: 0;
+.header-text > h2, p{
     margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#homepage-body{
+    font-size: 24px;
+    max-width: 800px;
+
+    align-self: top;
+
+    text-align: left;
+    padding: 1em;
+    margin: 0;
+
+    grid-area: body;
 }
 
 
-#euro{
+#flip{
   width: var(--coin-width);
   height: var(--coin-height);
   position: absolute;
@@ -60,7 +85,7 @@
   transform: rotateY(0deg);
 }
 
-.header-image:hover > #euro{
+.header-image:hover > #flip{
   transform: rotateY(180deg);
 }
 
@@ -79,6 +104,7 @@
   background-size: cover;
   width: var(--coin-width);
   height: var(--coin-height);
+
   transform: translateZ(1px);
   position: absolute;
   top: 0;
@@ -130,4 +156,42 @@
 
 .middle:nth-child(9){
   transform: translateZ(9px);
+}
+
+@media(max-width: 1200px){
+  .homepage-container{
+    --coin-width: 300px;
+    --coin-height: 300px;
+
+    --welcome-font: 64px;
+
+    padding: 1em;
+    display: grid;
+    grid-template-areas: 
+      'welcome'
+      'thumbnail'
+      'body';
+
+  }
+
+  #homepage-body{
+    align-self: center;
+    text-align: center;
+  }
+
+  #welcome{
+    text-align: center;
+    justify-content: center;
+  }
+  
+}
+
+@media(min-width: 1200px){
+  .homepage-container{
+    --coin-width: 450px;
+    --coin-height: 450px;
+
+    --welcome-font: 128px;
+  } 
+
 }
