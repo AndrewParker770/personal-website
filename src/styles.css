@@ -2,6 +2,14 @@
     --navbar-background: rgba(0, 0, 0, 0.8);
 
     --active-colour: #50aac8;
+
+    --rotation: 180deg;
+    --coin-width: 10em;
+    --coin-height: 10em;
+
+    --back-img: url("img1.jpg");
+    --front-img: url("img1.jpg");
+    --middle-img: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/faceeuro.png");
 }
 
 *{
